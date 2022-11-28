@@ -2,7 +2,7 @@ import React from "react";
 
 import { useState } from "react";
 import Alert from "./Alert";
-function Form({ onSubmit, msg, type, isEdit}) {
+function Form({ onSubmit, msg, type, isEdit }) {
   const [inputGrocery, setInputGrocery] = useState("");
   //   const [isEdit, setIsEdit] = useState(false)
   function handleInput(e) {
@@ -10,15 +10,14 @@ function Form({ onSubmit, msg, type, isEdit}) {
     setInputGrocery(newInput);
   }
   function handleSubmit(e) {
-    
     e.preventDefault();
 
     onSubmit(inputGrocery);
     setInputGrocery("");
   }
-//   if(isEdit){
-//     setInputGrocery("edithere")
-//   }
+  //   if(isEdit){
+  //     setInputGrocery("edithere")
+  //   }
   // if(isEdit){
 
   //     // function getEdit(id){
